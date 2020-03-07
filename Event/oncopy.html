@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防止页面被复制</title>
+    <script>
+        window.onload = function ()
+        {
+            //防止页面被复制，能点击但不粘贴后无内容
+            document.body.oncopy = function ()
+            {
+                return false;
+            }
+
+            //防止页面被选取
+            document.body.onselectstart = function ()
+            {
+                return false;
+            }
+
+            //禁用鼠标右键
+            document.oncontextmenu = function ()
+            {
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div>你好看你很好看。</div>
+</body>
+</html>

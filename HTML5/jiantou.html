@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制箭头</title>
+    <script type="text/javascript">
+        function $$(id)
+        {
+            return document.getElementById(id);
+        }
+
+        window.onload = function ()
+        {
+            var cav = $$("canvas");  //获取元素
+            var cxt = cav.getContext("2d");
+
+            cxt.moveTo(30, 30); //开始坐标
+            cxt.lineTo(30, 50);
+            cxt.lineTo(80, 50);
+            cxt.lineTo(80, 60);
+            cxt.lineTo(100, 40);
+            cxt.lineTo(80, 20);
+            cxt.lineTo(80, 30);
+            cxt.lineTo(30, 30);
+            cxt.stroke();  //开始绘制
+
+
+            cxt.fillStyle = "pink";  //设置填充颜色
+            cxt.fill();
+        }
+
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="150" style="border:1px dashed gray;"></canvas>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>替换字符串</title>
+    <script>
+        var str = "I love You";
+        var str_new = str.replace("You", "Me");   //将You换为Me
+        document.write(str_new + "<br/>");
+
+        //分割字符串
+        var str1 = "I love you";
+        var arr_split = str1.split(" ");    //以空格为界作为字符串分隔符，会形成一个数组
+        var arr_split1 = str1.split("");    //分割所有字符
+
+        document.write(arr_split[0] + "<br/>" + arr_split[1] + "<br/>" + arr_split[2] + "<br/>")
+        for (var i = 0; i <= str1.length; i++)
+        {
+            document.write(arr_split1[i] + "<br/>");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

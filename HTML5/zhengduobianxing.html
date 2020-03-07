@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正多边形</title>
+    <script type="text/javascript">
+        //获取对象函数
+        function $$(id)
+        {
+            return document.getElementById(id);
+        }
+
+        window.onload = function ()
+        {
+            //获取canvas对象
+            var canv = $$("canvas");
+            var cxt = canv.getContext("2d");
+
+            //调用正多边形函数绘制图形
+            createPolygon(cxt, 4, 100, 75, 50);
+
+            //填充颜色
+            cxt.fillStyle = "HotPink";
+            cxt.fill();
+
+
+            //正多边形绘制函数
+            //n-表示n边数，dx dy-表示多边形中心坐标，size-表示多边形的大小
+            function createPolygon(cxt, n, dx, dy, size)
+            {
+                cxt.beginPath();  //设置开始路径
+
+                var degree = (2*Math.PI)/n;
+                for (var i = 0; i < n; i++)  //绘制n条边
+                {
+                    var x = Math.cos(i * degree);
+                    var y = Math.sin(i * degree);
+
+                    //根据坐标绘制直线
+                    cxt.lineTo(x * size + dx, y * size + dy);
+                }
+                cxt.closePath();  //关闭路径
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="150" style="border:1px dashed gray;"></canvas>
+</body>
+</html>

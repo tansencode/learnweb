@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求长方体体积</title>
+    <script>
+        //定义函数
+        function getV(width, height, deepth)
+        {
+            var area = width * height;    //求底面积
+            var volume = width * height * deepth;  //求体积
+            var arr = [area, volume];
+            return arr;        //由于返回两个值，所以定义为数组
+        }
+
+        var shape = getV(2, 2, 10);   //调用函数
+        //document.write(shape);    //输出底面积和体积
+        document.write("底面积为：" + shape[0] + "<br/>");
+        document.write("体积为：" + shape[1]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

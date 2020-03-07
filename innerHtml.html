@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入Html</title>
+    <script>
+        window.onload = function ()
+        {
+            var oP = document.getElementById("content");
+
+            document.getElementById("txt1").value = oP.innerHTML;   //p标签内输出html内容
+            document.getElementById("txt2").value = oP.innerText;  //p标签内输出文本内容
+        }
+    </script>
+</head>
+<body>
+    <p id="content"><strong style="color:hotpink;">你好呀</strong></p>
+    innerHTML内容：<input id="txt1" type="text"><br/>
+    innerText内容：<input id="txt2" type="text">
+
+</body>
+</html>

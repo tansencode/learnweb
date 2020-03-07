@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn_out").click(function () {
+                $("img").fadeOut();  //淡出
+            });
+            $("#btn_in").click(function () {
+                $("img").fadeIn();   //淡入
+            });
+        })
+    </script>
+</head>
+<body>
+    <img src="camera.png" alt=""/><br />
+    <input id="btn_out" type="button" value="淡出" />
+    <input id="btn_in" type="button" value="淡入" />
+    </body>
+</html>

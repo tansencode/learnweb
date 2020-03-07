@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <script>
+        window.onload = function ()
+        {
+            var oDiv = document.querySelectorAll(".test");  //选择class选择器
+            oDiv[1].style.color = "red";   //修改第二个元素的属性
+        }
+    </script>
+</head>
+<body>
+    <div>绿叶学习网</div>
+    <div class="test">你好</div>
+    <div class="test">你好</div>  <!--这个元素被选中-->
+    <div class="test">你好</div>
+    <div>你好</div>
+</body>
+</html>

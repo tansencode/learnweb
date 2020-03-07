@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #lvye
+        {
+            display:inline-block;   /*将块元素转换为行内块元素*/
+            width:30px;
+            height:30px;
+            border:1px solid orange;
+            background-color:#FFE7B7;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="jquery.color.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#lvye").click(function () {
+                //复杂动画
+                //$(this).animate({ "width": "100px","height":"100px","background-color":"red"}, 1000);
+
+                //加边框复杂动画
+                $(this).animate({ "width": "+=100px", "height": "+=100px" }, 1000,  function () {
+                    $(this).css("border", "5px solid red");});
+
+                //队列动画
+                //$(this).animate({"width":"100px"},1000).animate({"height":"100px"},1000);
+
+                //停止动画
+                $(this).click(function () {
+                    $(this).stop();
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="lvye"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过标签名获取</title>
+    <script>
+        window.onload = function ()
+        {
+            var oU1 = document.getElementById("list");  //限制范围
+            var oLi = oU1.getElementsByTagName("li");  //通过标签名获取
+            oLi[2].style.color = "red";    //只对第三个元素进行处理
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Jquery</li>
+    </ul>
+
+</body>
+</html>

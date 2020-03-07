@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取</title>
+    <style type="text/css">
+        #box
+        {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;     /*获取此条内容*/
+        }
+    </style>
+
+
+    <script>
+        window.onload = function()
+        {
+            var oBtn = document.getElementById("btn");
+            var oBox = document.getElementById("box");
+
+            //添加点击事件
+            oBtn.onclick = function ()
+            {
+                alert(getComputedStyle(oBox).backgroundColor);  //获取背景颜色属性
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="获取颜色"/>
+    <div id="box">这里是颜色块</div>
+
+</body>
+</html>

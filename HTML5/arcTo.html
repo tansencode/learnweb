@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆</title>
+    <script type="text/javascript">
+        function $$(id)
+        {
+            return document.getElementById(id);
+        }
+
+        window.onload = function ()
+        {
+            //获取canvas元素
+            var canv = $$("canvas");
+            var cxt = canv.getContext("2d");
+
+            cxt.moveTo(20, 20);  //开始坐标
+            cxt.lineTo(70, 20);  //画一条直线
+            cxt.arcTo(120, 20, 120, 70, 50);
+            //(120,20)是控制点坐标,(120,70)是结束点坐标,50是半径
+
+            cxt.lineTo(120, 120);  //再画一条直线
+
+            //描边
+            cxt.strokeStyle = "Hotpink"; //描边颜色
+            cxt.stroke();   //开始描边
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="150" style="border:1px dashed gray;"></canvas>
+</body>
+</html>

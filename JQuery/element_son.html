@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <script src="jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script>
+        $(function()
+        {
+            $("#son+p").css("color", "pink");
+        })
+    </script>
+</head>
+<body>
+    <div id="list">
+        <p>hello</p>
+        <p>hello</p>
+        <div id="son">
+            <p>hello</p>
+            <p>hello</p>
+        </div>
+        <p>hello</p>   <!--选中-->
+        <p>hello</p>    <!--未选中-->
+    </div>
+</body>
+</html>

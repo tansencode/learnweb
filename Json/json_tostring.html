@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var obj =
+            {
+                "name":"helicopter",
+                "age":23,
+                //JSON对象内部也有一个JSON对象
+                hobby:
+                    {
+                        "first":"swimming",
+                        "second":"singing",
+                        "third":"dancing"
+                    }
+            }
+        var jsonStr=JSON.stringify(obj);  //将json对象转换为字符串格式
+        document.write(jsonStr);
+    </script>
+</head>
+<body>
+</body>
+</html>

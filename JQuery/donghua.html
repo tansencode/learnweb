@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>picture_gif</title>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn_hide").click(function () {
+                $("img").hide(500);
+            });
+            $("#btn_show").click(function () {
+                $("img").show(500);
+            });
+        })
+    </script>
+</head>
+<body>
+    <img src="camera.png" alt=""/><br/>
+    <input id="btn_hide" type="button" value="隐藏" />
+    <input id="btn_show" type="button" value="显示" />
+</body>
+</html>

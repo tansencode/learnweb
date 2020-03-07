@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>替换元素</title>
+    <script>
+        window.onload = function()
+        {
+            var oBtn = document.getElementById("btn");   //找到按钮元素
+
+            oBtn.onclick = function ()
+            {
+                //获取body中的第一个元素
+                var oFirst = document.querySelector("body *:first-child");
+
+                //获取两个文本框元素
+                var oTag = document.getElementById("tag");
+                var oTxt = document.getElementById("txt");
+
+                //根据两个文本框创建一个新节点，将输入的内容创建元素
+                var oNewTag = document.createElement(oTag.value);
+                var oNewTxt = document.createTextNode(oTxt.value);
+
+                //添加元素
+                oNewTag.appendChild(oNewTxt);
+                //用oNewTag元素替换oFirst元素
+                document.body.replaceChild(oNewTag, oFirst);
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>今天是2019年1月13日。</p>
+    <hr/>
+    输入标签：<input id="tag" type="text"/><br/>
+    输入内容：<input id="txt" type="text"/><br/>
+
+    <input id="btn" type="button" value="点击替换"/>
+
+</body>
+</html>

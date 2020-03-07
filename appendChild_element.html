@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入元素</title>
+    <script>
+        window.onload = function ()
+        {
+            var oBtn = document.getElementById("btn");   //通过id找到第二个input元素
+            //为按钮添加点击事件，表示点击后做什么
+            oBtn.onclick = function ()
+            {
+                var oUl = document.getElementById("list"); //通过id找到ul元素
+                var oTxt = document.getElementById("txt"); //通过id找到第一个input元素
+
+                //将文本框内容转换为文本结点,将第一个input文本框中输入的值保存为一个节点
+                var textNode = document.createTextNode(oTxt.value);
+                //动态创建一个li元素，表示新增来存放上面的值
+                var oLi = document.createElement("li");
+
+
+                //将文本结点内容插入到li元素中
+                oLi.appendChild(textNode);
+
+                //将li元素插入到ul中（最末尾）
+                //oUl.appendChild(oLi);
+
+                //将li元素插入到ul其他子元素li的前面（开头位置）
+                oUl.insertBefore(oLi, oUl.firstElementChild);
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>html</li>
+        <li>CSS</li>
+        <li>Javascript</li>  <!--新的li元素会插入到这个之后-->
+    </ul>
+    <input id="txt" type="text"/>    <!--第一个input元素-->
+    <input id="btn" type="button" value="插入"/>  <!--第二个input元素-->
+</body>
+</html>

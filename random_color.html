@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成随机颜色</title>
+    <script>
+        //定义函数
+        function  getRandomColor() {
+            var red = Math.floor(Math.random() * (256 +1));   //随机数范围[0, 255]
+            var green = Math.floor(Math.random() * (256 +1));
+            var blue = Math.floor(Math.random() * (256 +1));
+            var rgb = ("(" + red + "," + green + "," + blue + ")");    //定义数组存储得到的rgb值
+            return rgb;
+        }
+
+        document.write(getRandomColor());      //调用函数
+    </script>
+</head>
+<body>
+
+</body>
+</html>

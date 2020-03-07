@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成随机验证码</title>
+    <script>
+        var str = "abcdefghijklmnopqrstuvwxyz1234567890";  //定义随机码的组合字符
+        var arr = str.split("");    //变换为数组再处理
+        var result = "";    //存储生成的随机码
+
+        for (var i = 0; i < 4; i++)   //生成四位验证码
+        {
+            var n = Math.floor(Math.random() * (arr.length + 1));
+            //arr数组中随意生成4个字符，先生成随机数，再根据数找出字符
+            result += arr[n];
+        }
+        document.write(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

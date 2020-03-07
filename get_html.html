@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取html属性</title>
+    <script>
+        window.onload = function ()
+        {
+            //动态创建一个按钮
+            var oInput = document.createElement("input");
+            //为按钮添加属性
+            oInput.id = "submit";
+            oInput.type = "button";
+            oInput.value = "提交";
+
+            document.body.appendChild(oInput);
+
+            //为按钮添加点击事件
+            oInput.onclick = function()
+            {
+                alert(oInput.id);  //输出标签id值
+            };
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

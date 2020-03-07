@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过Name获取input元素</title>
+    <script>
+        window.onload = function ()
+        {
+            var oInput = document.getElementsByName("status");  //通过name获取input元素
+            oInput[2].checked = true;     //获取的是一个类数组，选中第二个元素
+        }
+    </script>
+</head>
+<body>
+    您的最高学历是：
+    <label><input type="radio" name="status" value="本科"/>本科 </label>
+    <label><input type="radio" name="status" value="硕士"/>硕士 </label>
+    <label><input type="radio" name="status" value="博士"/>博士 </label>
+</body>
+</html>

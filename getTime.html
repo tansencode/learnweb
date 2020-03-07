@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取时间</title>
+    <script>
+        var d = new Date();    //创建对象d
+        var myYear = d.getFullYear();   //获取年份
+        var myMonth = d.getMonth() + 1;   //获取月份
+        var myDate = d.getDate();   //获取日期
+        var myHours = d.getHours();   //获取时分秒
+        var myMinutes = d.getMinutes();
+        var mySeconds = d.getSeconds();
+
+        var myDay = d.getDay();   //获取星期
+        document.write("今天是:" + myYear + "-" + myMonth + "-" + myDate + " " + myHours + ":" + myMinutes + ":" + mySeconds + " " + "星期" + myDay)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

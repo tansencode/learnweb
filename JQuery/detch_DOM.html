@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>删除节点</title>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //为每一个li元素绑定一个click事件，点击li元素会弹出相应的文本内容
+            $("li").click(function () {
+                var txt = $(this).text();
+                alert(txt);
+            });
+            $("#btn").click(function () {
+                //删除“jQuery”这一个li元素
+                var $li = $("ul li:eq(3)").remove();
+                //将删除的li元素在添加到ul元素内部的末尾，添加后点击显示功能不见了
+                $($li).appendTo("ul");
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>canvas</li>
+    </ul>
+    <input id="btn" type="button" value="remove删除" />
+</body>
+</html>

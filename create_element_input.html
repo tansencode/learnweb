@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建表单元素</title>
+    <script>
+        window.onload = function()
+        {
+            var oInput = document.createElement("input");  //创建表单元素
+
+            //再依次插入属性
+            oInput.id = "submit";
+            oInput.type = "button";
+            oInput.value = "提交";
+
+            document.body.appendChild(oInput);  //将oInput元素添加到body中
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

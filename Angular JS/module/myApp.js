@@ -1,0 +1,1 @@
+var app = angular.module("myApp", []);  //创建一个模块myApp

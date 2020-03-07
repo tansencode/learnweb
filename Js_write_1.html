@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js弹出窗口</title>
+    <script>
+        window.onload = function() {   /*定义一个函数，alert为弹出一个窗口*/
+            alert("欢迎来学习Javascript!今天是2019年1月12日。");
+        }
+
+        /*离开页面时弹出窗口*/
+        window.onbeforeunload = function (event) {
+            var e = event || window.event;
+            e.returnValue = "非常高兴见到你！";
+        }
+    </script>
+</head>
+<body>
+    <h3>Javasript是一门神奇的语言。</h3>
+
+</body>
+</html>

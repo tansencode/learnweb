@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>填充长方形</title>
+    <script type="text/javascript">
+        //定义获取返回元素函数
+        function $$(id)
+        {
+            return document.getElementById(id);
+        }
+
+        window.onload = function ()
+        {
+            //获取元素
+            var cav = $$("canvas");
+            var cxt = cav.getContext("2d");  //获取2d对象
+
+            //创建矩形边框
+            cxt.strokeStyle = "green";
+            cxt.strokeRect(50, 50, 80, 80);
+            //创建填充矩形
+            cxt.fillStyle = "hotpink";   //设置填充颜色
+            cxt.fillRect(50, 50, 80, 80);  //(50, 50)起始坐标，width=80，height=80
+
+            //cxt.fillStyle = "lightpink";
+            //cxt.fillRect(30, 30, 80, 80);
+
+            //rect()方法
+            cxt.fillStyle = "LightPink";
+            cxt.rect(30, 30, 80, 80);
+            cxt.fill();   //开始填充
+
+            cxt.strokeStyle = "yellow";
+            cxt.rect(30, 30, 80, 80);
+            cxt.stroke();  //开始绘制矩形
+
+            //清空矩形区域
+            cxt.clearRect(50, 50, 60, 60);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="150" style="border:1px dashed gray;"></canvas>
+</body>
+</html>

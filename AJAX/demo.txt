@@ -1,0 +1,1 @@
+﻿今天是2019年1月23日，开始学习AJAX，异步的Javascript and XML。

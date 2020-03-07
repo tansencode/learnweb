@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆</title>
+    <script type="text/javascript">
+        function $$(id)
+        {
+            return document.getElementById(id);
+        }
+
+        window.onload = function ()
+        {
+            //获取canvas元素
+            var canv = $$("canvas");
+            var cxt = canv.getContext("2d");
+
+            //绘制半圆
+            cxt.beginPath();  //开始路径
+            cxt.arc(150, 120, 50, 0, 180*Math.PI/180, true);
+            //(80,80)是圆心坐标，50是半径，0是开始角度，180*Math.PI/180是结束角度
+            //true表示逆时针绘制，false表示顺时针绘制
+            cxt.closePath();   //关闭路径
+
+            //描边
+            cxt.strokeStyle = "HotPink"; //颜色
+            cxt.stroke();   //开始描边
+
+            //绘制圆
+            cxt.beginPath();  //开始路径
+            cxt.arc(60, 60, 50, 0, 360*Math.PI/180, true);
+            //(80,80)是圆心坐标，50是半径，0是开始角度，360*Math.PI/180是结束角度
+            //true表示逆时针绘制，false表示顺时针绘制
+            cxt.closePath();   //关闭路径
+
+            //描边
+            cxt.strokeStyle = "red"; //描边颜色
+            cxt.stroke();   //开始描边
+
+            //填充
+            cxt.fillStyle = "lightblue"; //填充颜色
+            cxt.fill();   //开始填充
+
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="150" style="border:1px dashed gray;"></canvas>
+</body>
+</html>

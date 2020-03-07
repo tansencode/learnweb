@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取Html属性</title>
+    <script>
+        window.onload = function ()
+        {
+            var oBtn = document.getElementById("btn");
+
+            if (oBtn.hasAttribute("value"))   //判断是否存在value属性，存在则执行删除
+            oBtn.onclick = function()
+            {
+                //alert(oBtn.getAttribute("class"));  //获取class的属性值
+                //oBtn.setAttribute("value", "button");  //设置value="button"
+                oBtn.removeAttribute("value");   //删除元素属性值value
+            };
+        }
+    </script>
+</head>
+<body>
+    <input id="btn" class="myBtn" type="button" value="获取属性值"/>
+
+</body>
+</html>

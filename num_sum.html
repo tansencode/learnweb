@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计字符串数字个数</title>
+    <script>
+        var str = "ewrewr 123dsfsd&&&%@";
+        num_sum = 0;   //数字个数
+        char_sum = 0;   //字符个数
+        space_sum = 0;  //空格个数
+        other_sum = 0;   //其他字符个数
+        for (var i = 0; i <= str.length; i++)   //遍历整个字符串
+        {
+            if (str.charAt(i) >= '0' && str.charAt(i) <= '9')
+            {
+                num_sum++;
+            }
+            else if ((str.charAt(i) >= 'a' && str.charAt(i) <= 'z') || (str.charAt(i) >= 'a' && str.charAt(i) <= 'z'))
+            {
+                char_sum ++;
+            }
+
+            else if (str.charAt(i) == " ")
+            {
+                space_sum++;
+            }
+            else{
+                other_sum++;
+            }
+        }
+        document.write(num_sum + "<br/>");  //数字个数
+        document.write(char_sum + "<br/>");  //字符个数
+        document.write(space_sum + "<br/>");  //空格个数
+        document.write(other_sum + "<br/>");  //其他字符个数
+    </script>
+</head>
+<body>
+
+</body>
+</html>

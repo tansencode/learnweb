@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <script>
+        window.onload = function ()
+        {
+            var oP = document.getElementById("content"); //获取元素
+
+            //鼠标移入事件
+            oP.onmouseover = function ()
+            {
+                this.style.color = 'red';  //移到文字上变为红色
+            };
+
+            //鼠标移出事件
+            oP.onmouseout = function ()
+            {
+                this.style.color = "blue";  //鼠标移出变为蓝色
+            };
+
+            //鼠标按下事件
+            oP.onmousedown = function ()
+            {
+                this.style.color = 'green';  //按下文字变为绿色
+            };
+
+            //鼠标松开事件
+            oP.onmouseup = function ()
+            {
+                this.style.color = 'pink';  //松开文字变为粉色
+            };
+
+            //鼠标移动事件
+            oP.onmousemove = function ()
+            {
+                this.style.backgroundColor = "yellow";  //鼠标移动文字背景为黄色
+            };
+
+        }
+    </script>
+</head>
+<body>
+    <p id="content">很高兴见到您。</p>
+</body>
+</html>

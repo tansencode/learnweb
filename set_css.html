@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置css</title>
+    <style type="text/css">
+        .oldBox    /*旧样式*/
+        {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;     /*获取此条内容*/
+        }
+
+        .newBox      /*新样式*/
+        {
+            width: 50px;
+            height: 50px;
+            background-color: lightpink;
+        }
+    </style>
+
+    <script>
+        window.onload = function()
+        {
+            var oBtn = document.getElementById("btn");
+            var oBox = document.getElementById("box");
+
+            //添加点击事件
+            oBtn.onclick = function ()
+            {
+                oBox.className = "newBox";  //直接通过class属性修改css样式
+            };
+        }
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="切换样式"/>
+    <div id="box" class="oldBox"></div>    <!--修改此处样式-->
+
+</body>
+</html>

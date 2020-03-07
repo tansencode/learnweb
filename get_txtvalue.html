@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取单行文本框的内容</title>
+    <script>
+        window.onload = function ()
+        {
+            var oBtn = document.getElementById("btn");   //找到按钮标签
+
+            oBtn.onclick = function()
+            {
+                var oTxt = document.getElementById("txt");   //找到txt标签
+                alert(oTxt.value);  //输出标签的value属性
+            };
+        }
+    </script>
+</head>
+<body>
+    <input id="txt" type="text"/>   <!--输入框-->
+    <input id="btn" type="button" value="获取输入内容"/>
+
+</body>
+</html>

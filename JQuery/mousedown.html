@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>mousedown</title>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        #wrapper
+        {
+            text-align:left;
+            display:inline-block;
+            width:300px;
+            border:1px solid silver;
+        }
+        h3
+        {
+            text-align:center;
+            padding:10px;
+            background-color:#F1F1F1;
+            border-bottom:1px solid gray;
+        }
+        h3:hover
+        {
+            background-color:#E1E1E1;
+            cursor:pointer;
+        }
+        p
+        {
+            padding:8px;
+            display:none;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("h3").mousedown(function () {
+                $("p").slideToggle();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <h3>绿叶学习网简介</h3>
+        <p>绿叶学习网成立于2015年4月1日，是一个富有活力的技术学习网站。绿叶学习网为广大网络工作者（网页开发人员、站长等）提供各种精品教程以及最精华资料。绿叶学习网跟其他垃圾采集站不一样，绿叶学习网中的每一个课程、每一篇文章，甚至每一个知识点，都凝聚了本人的最辛勤的汗水。多少日日夜夜，本人呕心沥血在一遍一遍地编辑，为的是给广大网站爱好者提供最精华的知识。</p>
+    </div>
+</body>
+</html>

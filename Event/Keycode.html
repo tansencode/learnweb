@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取按键值</title>
+    <script>
+        window.onload = function ()
+        {
+            var oSpan = document.getElementsByTagName("span")[0];
+            //获取到的是一个类数组，取第一个元素
+
+            //添加事件监听机制
+            window.addEventListener("keydown", function(e)
+            {
+                if (e.keyCode === 38 || e.keyCode === 87)
+                {
+                    oSpan.innerHTML = "上";
+                }
+                else if (e.keyCode ===39 || e.keyCode === 68)
+                {
+                    oSpan.innerHTML = "右";
+                }
+                else if (e.keyCode === 40 || e.keyCode === 83)
+                {
+                    oSpan.innerHTML = "下";
+                }
+                else if (e.keyCode === 37 || e.keyCode === 65)
+                {
+                    oSpan.innerHTML = "左";
+                }
+                else
+                {
+                    oSpan.innerHTML = "";
+                }
+            }, false)
+        }
+    </script>
+</head>
+<body>
+    <div>你控制的方向是：<span stylr="font-weight:bold;color:hotpink;"></span></div>
+
+</body>
+</html>

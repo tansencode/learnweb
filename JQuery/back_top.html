@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            height:1800px;
+        }
+        #back-to-top
+        {
+            position:fixed;
+            right:50px;
+            bottom:50px;
+            display:none; /*设置默认情况下元素为隐藏状态*/
+            width:40px;
+            height:40px;
+            color:white;
+            background-color:#45B823;
+            font-family:微软雅黑;
+            font-size:15px;
+            font-weight:bold;
+            text-align:center;
+            cursor:pointer;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /*根据滚动距离判断按钮是否显示或隐藏*/
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $("#back-to-top").fadeIn(200);
+                }
+                else {
+                    $("#back-to-top").fadeOut(200);
+                }
+            });
+            /*实现点击滚动回顶部*/
+            $("#back-to-top").click(function () {
+                $("html,body").animate({ scrollTop: 0 }, 500);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="back-to-top">回到顶部</div>
+</body>
+</html>

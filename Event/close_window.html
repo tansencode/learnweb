@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关闭窗口</title>
+    <script>
+        window.onload = function ()
+        {
+            var btnOpen = document.getElementById("btn_open");
+            var btnClose = document.getElementsByTagName("btn_close");
+
+            var opener = null;
+
+            btnOpen.onclick = function ()
+            {
+                opener = window.open("https://www.baidu.com");  //打开窗口
+            };
+
+            btnClose.onclick = function ()
+            {
+                opener.close();  //关闭窗口
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn_open" type="button" value="打开window"/>
+    <input id="btn_close" type="button" value="关闭window"/>
+
+</body>
+</html>

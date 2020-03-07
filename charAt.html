@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位字符</title>
+    <script>
+        var str = "How are you doing?";
+
+        //定义一个空字符串，来保存字符
+        var result = "";
+        for (var i = 0; i <= str.length; i++)   //小于字符串长度遍历
+        {
+            if(str.charAt(i) < "z")   //找出小于z的字符
+            {
+                result += str.charAt(i) + " ";
+            }
+        }
+        document.write(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

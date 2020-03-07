@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <script>
+        window.onload = function ()
+        {
+            //获取元素
+            var oTxt = document.getElementById("txt");
+
+            var oNum = document.getElementById("num");
+
+            //键盘事件
+            oTxt.onkeyup = function ()
+            {
+                var str = oTxt.value;        //输入框输入字符
+                oNum.innerHTML = str.length;  //计算输入的的字符长度
+            };
+
+        }
+    </script>
+</head>
+<body>
+    <input id="txt" type="text"/>
+    <div>字符串长度:<span id="num">0</span></div>
+
+</body>
+</html>

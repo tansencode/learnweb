@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <script>
+        window.onload = function ()
+        {
+            var oSelect = document.getElementById("list");
+            //添加选中事件
+            oSelect.onchange = function ()
+            {
+                var link = this.options[this.selectedIndex].value;  //输出被选中的链接
+                window.open(link);   //打开新窗口，并前往链接
+            }
+        }
+    </script>
+</head>
+<body>
+    <select id="list">
+        <option value="https://www.baidu.com">百度</option>
+        <option value="https://www.sina.com.cn">新浪</option>
+        <option value="https://www.qq.com">腾讯</option>
+    </select>
+
+</body>
+</html>

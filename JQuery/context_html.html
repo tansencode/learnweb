@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                //使用html()获取HTML内容
+                var a = $("#p1").html();
+                alert(a);
+            });
+            $("#btn2").click(function () {
+                //使用html()设置HTML内容
+                $("#p2").html("<strong>jQuery入门教程</strong>");
+            })
+        })
+    </script>
+</head>
+<body>
+<p id="p1"><strong>绿叶学习网</strong></p>
+<p id="p2">绿叶学习网</p>
+<hr />
+获取p1的值：<input type="button" id="btn1" value="获取"/><br />
+设置p2的值：<input type="button" id="btn2" value="设置"/>
+</body>
+</html>

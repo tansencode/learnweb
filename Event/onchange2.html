@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框</title>
+    <script>
+        window.onload = function ()
+        {
+            //选中元素
+            var oSelect = document.getElementById("selectAll");
+            var oFruit = document.getElementsByName("fruit");
+
+            //添加复选框选中事件，实现全选和反选功能
+            oSelect.onchange = function ()
+            {
+               if(this.checked)   //如果全选/复选被选中
+               {
+                   //类数组遍历，有三个元素，实现全选
+                   for (var i = 0; i < oFruit.length; i++)
+                   {
+                       oFruit[i].checked = true;   //添加checked属性
+                   }
+               }
+               else
+               {
+                   for (var i = 0; i < oFruit.length; i++)
+                   {
+                       oFruit[i].checked = false;   //全部不选中
+                   }
+               }
+            };
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p><label><input id="selectAll" type="checkbox"/>全选/反选</label></p>
+
+        <label><input type="checkbox" name="fruit" value="苹果"/>苹果</label>
+        <label><input type="checkbox" name="fruit" value="香蕉"/>香蕉</label>
+        <label><input type="checkbox" name="fruit" value="柚子"/>柚子</label>
+    </div>
+
+</body>
+</html>

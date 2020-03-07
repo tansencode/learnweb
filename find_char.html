@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>找出字符</title>
+    <script>   //找出所有字符c的个数
+        var str = "Can ccc Can a can";
+        var char_num = 0;
+
+        for (var i = 0; i <= str.length; i++)    //遍历所有字符
+        {
+            var char = str.charAt(i);   //分为一个一个字符
+            //将所有字符转换为小写，并找出c的个数
+            if (char.toLowerCase() == "c"){
+                char_num += 1;
+            }
+        }
+
+        document.write(char_num);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

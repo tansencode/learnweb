@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对话框</title>
+    <script>
+        window.onload = function ()
+        {
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
+            var oBtn3 = document.getElementById("btn3");
+
+            oBtn1.onclick = function ()
+            {
+                alert("hello");
+            }
+
+            oBtn2.onclick = function ()
+            {
+                if(confirm("你确定离开吗？"))
+                {
+                    window.location.href = "https://www.baid.com";
+                }
+                else
+                {
+                    document.write("你取消了跳转");
+                }
+            };
+
+            oBtn3.onclick = function ()
+            {
+                var name = prompt("请输入你的姓名");
+                document.write("欢迎来到<strong>" + name + "</strong>");
+            };
+        }
+    </script>
+</head>
+<body>
+    <input id="btn1" type="button" value="1"/>
+    <input id="btn2" type="button" value="2"/>
+    <input id="btn3" type="button" value="3"/>
+</body>
+</html>

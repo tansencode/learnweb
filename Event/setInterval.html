@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时</title>
+    <style type="text/css">
+        div
+        {
+            width: 100px;
+            height: 100px;
+            border: 1px solid silver;
+        }
+    </style>
+    <script>
+        window.onload = function ()
+        {
+            //获取元素
+            var oBtn = document.getElementsByTagName("input");
+
+            var oDiv = document.getElementsByTagName("div")[0];
+
+            //定义颜色数组，存放6种颜色
+            var colors = ["red", "orange", "yellow", "pink", "blue", "green"];
+
+            //定期器
+            var timer = null;
+
+            //计数
+            var i = 0;
+
+            //开始按钮
+            oBtn[0].onclick = function ()
+            {
+                //每点击开始一次，清除定时器
+                clearInterval(timer);
+
+                //每个一秒切换一次颜色
+                timer = setInterval(function(){
+                    oDiv.style.backgroundColor = colors[i];
+                    i++;
+                    i = i % colors.length;
+                }, 1000);   //1000ms切换一次
+            };
+
+            //暂停按钮
+            oBtn[1].onclick = function ()
+            {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="开始"/>
+    <input type="button" value="暂停"/>
+    <div></div>
+</body>
+</html>

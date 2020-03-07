@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class选择器</title>
+    <script src="jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script>
+        $(function()
+        {
+            $(".date").css("color", "pink");   //选中class="date"的元素
+        })
+    </script>
+</head>
+<body>
+    <div>hello</div>
+    <div class="date">hello</div>   <!--被选中-->
+    <div class="year">hello</div>
+    <span class="date">hello</span>  <!--被选中-->
+    <p>hello</p>
+
+</body>
+</html>

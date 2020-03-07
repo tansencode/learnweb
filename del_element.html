@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除元素</title>
+    <script>
+        window.onload = function ()
+        {
+            var oBtn = document.getElementById("btn");  //找到input元素标签
+            //创建点击后动作
+            oBtn.onclick = function ()
+            {
+                var oUl = document.getElementById("list");  //找到ul元素标签
+
+                //删除ul最后一个li元素
+                //oUl.removeChild(oUl.lastElementChild);
+
+                //删除ul第一个li元素
+                //oUl.removeChild(oUl.firstElementChild);
+
+                //删除ul及它所有li元素
+               //document.body.removeChild(oUl);
+
+               //复制ul及其所有li子元素
+               document.body.appendChild(oUl.cloneNode(1));
+
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>html</li>
+        <li>Java</li>
+        <li>Python</li>  <!--最后一个孩子元素-->
+    </ul>
+
+    <input id="btn"  type="button"  value="删除"/>
+
+</body>
+</html>

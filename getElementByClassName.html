@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classname获取元素</title>
+    <script>
+        window.onload = function()
+        {
+            var oLi = document.getElementsByClassName("select"); //通过class属性来获取元素
+            oLi[0].style.color = "red";   //oLi是一个类数组，只改变第一个元素属性
+
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>Html</li>
+        <li>CSS</li>
+        <li class="select">Javascript</li>
+        <li class="select">Python</li>
+    </ul>
+
+
+</body>
+</html>

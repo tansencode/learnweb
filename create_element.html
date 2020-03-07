@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建元素</title>
+    <script>
+        window.onload = function()
+        {
+            var oDiv = document.getElementById("content");  //通过Id找到元素
+            var oStrong = document.createElement("strong");  //创建元素
+            var oTxt = document.createTextNode("Hello");     //创建文本节点内容
+
+            //将文本节点内容插入到strong元素中
+            oStrong.appendChild(oTxt);
+            //再将strong元素插入到div元素中
+            oDiv.appendChild(oStrong);
+        }
+    </script>
+</head>
+<body>
+    <div id = "content"></div>
+</body>
+</html>

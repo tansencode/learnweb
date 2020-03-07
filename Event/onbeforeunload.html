@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面加载</title>
+    <script>
+        //页面加载完触发
+        window.onload = function ()
+        {
+            alert("很高兴见到您！");
+        };
+
+        //离开页面前触发
+        window.onbeforeunload = function (e)
+        {
+            e.returnValue = "再见！";
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

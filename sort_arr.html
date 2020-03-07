@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组元素排序</title>
+    <script>
+        //定义一个升序序列
+        function up(a, b)
+        {
+            return a - b;
+        }
+        //定义一个降序序列
+        function down(a, b)
+        {
+            return b - a;
+        }
+
+        //定义一个数组
+        var arr = [1, 4, 9, 3, 7, 6];
+        arr.sort(up);    //升序
+        document.write("升序：" + arr.join("、") + "<br/>");
+
+        arr.sort(down);   //降序
+        document.write("降序：" + arr.join("、") + "<br/>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

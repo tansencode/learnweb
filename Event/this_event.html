@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+    <script>
+        window.onload = function ()
+        {
+            //获取到是一个类数组，提取第一个元素
+            var oDiv = document.getElementsByTagName("div")[0];
+            var oP = document.getElementsByTagName("p")[0];
+
+            //添加点击事件
+            oDiv.onclick = changeColor;
+            oP.onclick = changeColor;
+
+            //定义函数
+            function changeColor ()
+            {
+                this.style.color = "hotpink";  //哪个被点击哪个this就指向谁
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>你好。</div>
+    <p>你好。</p>
+</body>
+</html>

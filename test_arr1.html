@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串转换数组</title>
+    <script>
+        var str1 = "绿叶学习网";
+        var arr = str1.split("");    //字符分隔为数组
+        var str2 = arr.join("><");
+        //以><连接数组，这里变为一个字符串，要变为数组才能进行后续操作
+        var arr1 = str2.split("");    //切割为字符数组
+        arr1.unshift("<");    //数组开头添加<
+        arr1.push(">");      //数组结尾添加>
+        var str3 = arr1.join("");    //变为无逗号连接的字符串，注意又变为字符串
+        document.write(str3);    //输出数组
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

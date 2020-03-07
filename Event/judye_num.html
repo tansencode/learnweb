@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证输入</title>
+    <script>
+        window.onload = function ()
+        {
+            //获取元素
+            var oTxt = document.getElementById("txt");
+
+            var oDiv = document.getElementById("content");
+
+            //只能输入数字
+            var myregex = /^[0-9]*$/;
+
+            //键盘事件
+            oTxt.onkeyup = function ()
+            {
+                //判断输入的是否为数字
+                if (myregex.test(oTxt.value))
+                {
+                    oDiv.innerHTML = "输入正确";
+                }
+                else{
+                    oDiv.innerHTML = "必须输入数字";
+                }
+            };
+
+        }
+    </script>
+</head>
+<body>
+    <input id="txt" type="text"/>
+    <div id="content" style="color:red;"></div>
+</body>
+</html>

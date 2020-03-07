@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>json对象</title>
+    <script type="text/javascript">
+        var obj =
+            {
+                "name":"helicopter",
+                "age":23,
+                //JSON对象内部也有一个JSON对象
+                hobby:
+                    {
+                        "first":"swimming",
+                        "second":"singing",
+                        "third":"dancing"
+                    }
+            }
+        //读取JSON数据
+        document.write("名字是：" + obj["name"] + "<br/>");
+        document.write("第一项爱好是：" + obj.hobby.first);
+    </script>
+</head>
+<body>
+</body>
+</html>
